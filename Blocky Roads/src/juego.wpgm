@@ -1,0 +1,18 @@
+import wollok.game.*
+import intro.*
+import mapa.*
+
+program BlockyGame {
+	game.title("blockyRoads")
+	game.height(11)
+	game.width(11)
+	game.cellSize(50)
+	
+	game.addVisual(intro)
+	keyboard.enter().onPressDo{
+		game.removeVisual(intro)
+		mapa.cargar()
+	}
+
+	game.start()
+}
